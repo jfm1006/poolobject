@@ -9,6 +9,5 @@ Workshop to use good practices in software developmemnt: testing and measurement
 
 Authors:
 
-
 - Jorge Fernandez Moreno
 - Alvaro Mendez Alonso
