@@ -5,6 +5,8 @@ package ubu.gii.dass.test.c01;
 
 import static org.junit.Assert.*;
 
+import java.util.Vector;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -55,7 +57,16 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testAcquireReusable() {
-		fail("Not yet implemented");
+		Vector<Reusable> obtenidos = new Vector<>();
+		try{
+			while{
+				Reusable reus = pool.acquireReusable();
+				assertNotNull(reus);
+				obtenidos.add(reus);
+			}
+		}catch (NotFreeInstanceException e){
+			assertTrue(obtenidos.size()<=2);
+		}
 	}
 
 	/**
