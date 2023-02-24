@@ -59,7 +59,7 @@ public class ReusablePoolTest {
 	public void testAcquireReusable() {
 		Vector<Reusable> obtenidos = new Vector<>();
 		try{
-			while{
+			while(true){
 				Reusable reus = pool.acquireReusable();
 				assertNotNull(reus);
 				obtenidos.add(reus);
