@@ -32,6 +32,11 @@ public class ReusablePoolTest {
 	 */
 	@After
 	public void tearDown() throws Exception {
+		try{
+			while(true){
+				pool.acquireReusable();
+			}
+		}catch(Exception ex){}
 	}
 
 	/**
