@@ -74,7 +74,13 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testReleaseReusable() {
-		fail("Not yet implemented");
+		Reusable reus = new Reusable();
+		try{
+			pool.releaseReusable(reus);
+			pool.releaseReusable(reus);
+		}catch(DuplicatedInstanceException ex){
+			assertTrue(true);
+		} 
 	}
 
 }
